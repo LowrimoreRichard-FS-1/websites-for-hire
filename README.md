@@ -60,7 +60,6 @@ All functionality is contained in **`JS/script.js`**.
 For project inquiries or support, please reach out directly:
 
 * **👤 Name:** Richard Lowrimore
-* **📞 Phone Number:** (430) 322-1662
 * **📧 Email:** richardlowrimore22@gmail.com
 * **🏠 Address:** 13491 County Road 472, Lindale, Texas 75771
 
