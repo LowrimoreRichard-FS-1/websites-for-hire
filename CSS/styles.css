@@ -367,3 +367,16 @@ body.dark-mode main.container {
         margin-top: 15px;
     }
 }
+
+.contact-info {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--card-bg); /* This uses your existing dark/light mode colors */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.contact-info h2 {
+  color: #007bff;
+  margin-top: 0;
+}
