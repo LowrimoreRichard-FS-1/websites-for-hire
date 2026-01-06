@@ -213,14 +213,14 @@ footer {
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column; /* Stacks logo above the nav */
+        flex-direction: column !important; /* Forces logo and nav to stack */
         text-align: center;
         padding: 20px 10px;
     }
 
     nav ul {
-        flex-direction: column; /* Stacks the 7 links vertically */
-        gap: 10px;
+        flex-direction: column !important; /* Stacks the 7 links vertically */
+        gap: 15px; /* Adds space so links are easy to tap */
         margin-top: 20px;
         padding: 0;
     }
