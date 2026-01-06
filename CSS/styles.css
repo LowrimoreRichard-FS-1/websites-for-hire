@@ -209,3 +209,23 @@ footer {
     font-size: 0.95rem;
     line-height: 1.5;
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Stacks logo above the nav */
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stacks the 7 links vertically */
+        gap: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .logo-group {
+        margin-bottom: 10px;
+    }
+}
