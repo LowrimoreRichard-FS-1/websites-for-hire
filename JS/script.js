@@ -1,88 +1,35 @@
-// --- 1. Theme Toggle Logic ---
-const getTheme = () => localStorage.getItem('theme');
-
-// Set the theme class and the emoji icon
-const setTheme = (theme) => {
-    localStorage.setItem('theme', theme);
-    document.body.className = theme === 'dark' ? 'dark-mode' : '';
-    document.getElementById('theme-toggle').textContent = theme === 'dark' ? '☀️' : '🌙';
-};
-
+/* --- script.js --- */
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) { 
-        
-        // REFINEMENT: Optimized theme initialization
-        const savedTheme = getTheme();
-        const initialTheme = savedTheme === null ? 'light' : savedTheme;
-        
-        setTheme(initialTheme); // Apply initial theme
+    // 1. Typing Animation for Hero Section
+    const typeTarget = document.querySelector('.typing-text');
+    if (typeTarget) {
+        const phrases = ["E-commerce Sites", "Modern Portfolios", "Landing Pages"];
+        let i = 0, j = 0, current = "", isDeleting = false;
 
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = getTheme();
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            setTheme(newTheme);
-        });
+        function type() {
+            current = phrases[i];
+            typeTarget.textContent = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
+            
+            if (!isDeleting && j === current.length + 1) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % phrases.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 100 : 200);
+            }
+        }
+        type();
     }
 
-    // --- 2. Form Validation Listener ---
-    const form = document.querySelector('#contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            validateForm();
+    // 2. Mobile Nav Logic (Existing)
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-links');
+    if(navToggle) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
     }
 });
-
-function setERRor(id, message) {
-    const errorElement = document.getElementById(id);
-    if (errorElement) {
-        errorElement.textContent = message;
-        errorElement.style.display = message ? 'block' : 'none';
-    }
-}
-
-function validateForm() {
-    let isValid = true;
-    
-    // Clear all previous errors
-    setERRor('nameError', '');
-    setERRor('emailError', '');
-    setERRor('messageError', '');
-
-    // Name Validation
-    const nameInput = document.getElementById('name');
-    if (!nameInput.value.trim()) {
-        setERRor('nameError', 'Name is required.');
-        isValid = false;
-    }
-    
-    // Email Validation
-    const emailInput = document.getElementById('email');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailInput.value.trim()) {
-        setERRor('emailError', 'Email is required.');
-        isValid = false;
-    } else if (!emailRegex.test(emailInput.value.trim())) {
-        setERRor('emailError', 'Please enter a valid email address.');
-        isValid = false;
-    }
-
-    // Message Validation
-    const messageInput = document.getElementById('message');
-    if (!messageInput.value.trim()) {
-        setERRor('messageError', 'Message is required.');
-        isValid = false;
-    } else if (messageInput.value.trim().length < 10) {
-        setERRor('messageError', 'Message must be at least 10 characters long.');
-        isValid = false;
-    }
-
-    if (isValid) {
-        alert('Form submitted successfully!');
-        // form.reset(); 
-    }
-    
-    return isValid;
-}
