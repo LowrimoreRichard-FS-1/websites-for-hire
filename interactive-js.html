@@ -3,75 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional web development services offering modern, responsive, and interactive website solutions for hire this is the interactive-js page.">    
-    <title>Interactive JS - Websites For Hire</title>
+    <title>Interactive JS | Websites For Hire</title>
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="icon" type="image/svg+xml" href="IMG/logo.svg">
 </head>
 <body>
-    <header>
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <div class="logo-group" style="display: flex; align-items: center; gap: 10px;">
-            <img src="IMG/logo.svg" alt="Websites For Hire Spider Logo" style="width: 40px; height: 40px;">
-            <h1 style="margin: 0;">Websites For Hire</h1>
-        </div>
-        <nav>
-            <ul style="display: flex; list-style: none; gap: 15px; margin: 0; padding: 0;">
+    <div class="header-main-container">
+        <nav class="nav-container">
+            <h1 class="brand-name">Websites For Hire</h1>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="second-page.html">Introduction</a></li>
-                <li><a href="form-page.html">Form</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="responsive-design.html">Responsive</a></li>
+                <li><a href="form-page.html">Form</a></li>
+                <li><a href="responsive-design.html">Responsive Design</a></li>
                 <li><a href="modern-css.html">Modern CSS</a></li>
-                <li><a href="interactive-js.html" class="active">Interactive JS</a></li>
+                <li><a href="interactive-js.html">Interactive JS</a></li>
             </ul>
+            <button id="theme-toggle">🌙</button>
         </nav>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
     </div>
-</header>
-    <main class="container content-page">
-        <h2>Interactive JavaScript</h2>
-        <p>JavaScript is the programming language of the web, and we use modern, clean JavaScript (often referred to as 'Vanilla JS' when no large libraries are needed) to add dynamic behavior and improve the user experience without sacrificing performance.</p>
 
-        <section class="core-examples">
-            <h3>Core JS Examples in this Project</h3>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h4>Client-Side Form Validation</h4>
-                    <p>On the <a href="form-page.html">Form page</a>, JavaScript checks your inputs for required fields and proper formats (like email regex) *before* submitting, providing instant feedback and reducing server load.</p>
-                </div>
-                <div class="feature-item">
-                    <h4>Dark/Light Theme Toggle</h4>
-                    <p>The theme toggle button uses JavaScript to detect the user's preference and apply the `dark-mode` CSS class to the `body`, saving the choice to local storage for persistence.</p>
-                </div>
-                <div class="feature-item">
-                    <h4>Single-Page Application (SPA) Fundamentals</h4>
-                    <p>While this is a multi-page site, the foundational JS principles (like DOM manipulation and event listeners) can be extended to create complex SPAs using frameworks like React or Vue.</p>
-                </div>
-            </div>
+    <main class="container">
+        <section class="hero-card reveal">
+            <h2>JavaScript Interactivity</h2>
+            <p>This page demonstrates how JavaScript can detect when you scroll and trigger beautiful animations automatically.</p>
         </section>
-        <p>We focus on lightweight, efficient scripting that enhances functionality without bloat. </p>
-        <a href="index.html" class="cta-button">Back to Home</a>
     </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">&copy; 2026 Websites For Hire. All rights reserved.</p>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="second-page.html">Introduction</a></li>
-                        <li><a href="form-page.html">Form</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="responsive-design.html">Responsive</a></li>
-                        <li><a href="modern-css.html">Modern CSS</a></li>
-                        <li><a href="interactive-js.html">Interactive JS</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
 
     <script src="JS/script.js"></script>
 </body>
