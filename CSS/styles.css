@@ -174,3 +174,20 @@ body.dark-mode input, body.dark-mode textarea { background: #444; color: #fff; b
 @media (min-width: 992px) {
     .nav-container { flex-direction: row; justify-content: space-between; }
 }
+
+/* Branding Styles */
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.3));
+}
+
+body.dark-mode .logo-icon {
+    filter: drop-shadow(0 0 8px #007bff) brightness(1.2);
+}
