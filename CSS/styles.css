@@ -175,19 +175,25 @@ body.dark-mode input, body.dark-mode textarea { background: #444; color: #fff; b
     .nav-container { flex-direction: row; justify-content: space-between; }
 }
 
-/* Branding Styles */
 .brand-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .logo-icon {
-    width: 40px;
-    height: auto;
-    filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.3));
+    width: 40px;  /* Adjust this if you want the spider larger or smaller */
+    height: 40px; /* Keeping it square for the SVG */
+    display: block;
 }
 
+.brand-name {
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
 body.dark-mode .logo-icon {
     filter: drop-shadow(0 0 8px #007bff) brightness(1.2);
 }
