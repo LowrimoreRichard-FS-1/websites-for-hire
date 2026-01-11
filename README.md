@@ -1,24 +1,38 @@
+# Websites For Hire | 2026 Professional Portfolio
 
-# Websites For Hire 🕸️
-> Professional, accessible, and responsive web solutions.
+Welcome to the official repository for **Websites For Hire**. This project is a high-performance, multi-page freelance platform designed to showcase modern web development standards, including fluid responsiveness, interactive user experiences, and clean architecture.
 
-[![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## 🚀 Overview
-A high-performance, 7-page service portfolio optimized for modern mobile devices (Pixel 7) and built with a focus on accessibility (A11y).
 
-## ✨ Key Features
-- **Responsive Design**: Custom-tuned media queries for seamless mobile browsing.
-- **Accessibility First**: Full ARIA label support and optimized contrast ratios.
-- **Dark Mode**: Integrated theme toggling for user comfort.
-- **Performance**: Optimized asset loading and clean semantic HTML.
+## 🚀 Key Features
 
-## 🛠️ Roadmap (v1.2)
-- [ ] Add Scroll-driven entry animations.
-- [ ] Implement a dynamic "Typing" hero effect.
-- [ ] Integrate real-time form validation.
+* **Universal Responsiveness**: Optimized for everything from a 320px small mobile screen (iPhone SE/Android) to massive 4K Desktop monitors.
+* **Dynamic Theme Engine**: A persistent Dark Mode toggle that saves user preferences using `localStorage`.
+* **Interactive UI**:
+    * **Typing Animation**: A custom JavaScript-driven hero section.
+    * **Scroll Reveal**: Intersection Observer API used for smooth element entry animations.
+    * **Custom Branding**: A professional blue/white aesthetic with high-end typography.
+* **Performance First**: Zero external libraries (No jQuery/Bootstrap). Lightweight, "Vanilla" CSS and JavaScript for maximum speed.
+* **Form Integration**: Fully functional contact system using Formspree.
 
-## 📈 Project Management
-This project uses **GitHub Issues** and **Projects** to track development milestones and feature requests.
+## 🛠️ Built With
+
+- **HTML5**: Semantic structure for SEO and accessibility.
+- **Modern CSS**: Custom properties (variables), Flexbox, and CSS Grid.
+- **Vanilla JavaScript**: Modern ES6+ logic for high performance.
+
+## 📂 Project Structure
+
+```text
+├── index.html              # Home page with typing hero
+├── second-page.html        # Introduction
+├── about.html              # Mission & Background
+├── form-page.html          # Contact & Formspree integration
+├── responsive-design.html  # Technical showcase of fluid layouts
+├── modern-css.html         # CSS Grid & Variable showcase
+├── interactive-js.html     # Logic & Animation showcase
+├── CSS/
+│   └── styles.css          # Master stylesheet (Light/Dark/Responsive)
+├── JS/
+│   └── script.js          # Master logic script
+└── IMG/                    # Image assets & Logo
