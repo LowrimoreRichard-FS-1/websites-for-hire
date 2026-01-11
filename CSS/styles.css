@@ -1,3 +1,4 @@
+/* --- CSS/styles.css --- */
 :root {
     --primary: #007bff;
     --primary-dark: #0056b3;
@@ -10,12 +11,7 @@
     --transition: all 0.3s ease;
 }
 
-/* 1. Custom Scrollbar */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
-
-/* 2. Base Styles */
+/* 1. Base Styles */
 body {
     margin: 0;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -25,7 +21,7 @@ body {
     line-height: 1.6;
 }
 
-/* 3. Header & Navigation (This div contains the nav) */
+/* 2. Header & Navigation (Div contains nav) */
 .header-main-container {
     background: #ffffff;
     padding: 1rem 5%;
@@ -50,13 +46,14 @@ body {
     gap: 15px;
 }
 
-/* LOGO FIX: This makes the SVG visible in Light Mode */
+/* LIGHT MODE LOGO FIX */
+/* This forces the ENTIRE SVG (spider AND web) to be Blue */
 .logo-icon {
     width: 45px;
     height: 45px;
-    /* This filter turns a light/white SVG into your Primary Blue */
-    filter: invert(31%) sepia(94%) saturate(2530%) hue-rotate(190deg) brightness(95%) contrast(102%);
     transition: var(--transition);
+    /* This filter makes light/white parts of the SVG turn Blue */
+    filter: invert(31%) sepia(94%) saturate(2530%) hue-rotate(190deg) brightness(95%) contrast(102%);
 }
 
 .brand-name {
@@ -89,7 +86,7 @@ body {
     color: #ffffff !important;
 }
 
-/* 4. Theme Toggle Button */
+/* 3. Theme Toggle Button */
 #theme-toggle {
     background: var(--primary);
     color: white;
@@ -101,7 +98,7 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* 5. Hero Cards */
+/* 4. Hero Cards */
 .hero-card {
     background: var(--card-bg);
     padding: 4rem 2rem;
@@ -123,7 +120,7 @@ body {
     margin-top: 20px;
 }
 
-/* 6. Professional Footer */
+/* 5. Professional Footer */
 footer {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -153,7 +150,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* 7. DARK MODE OVERRIDES */
+/* 6. DARK MODE OVERRIDES (Placed at the bottom) */
 body.dark-mode {
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -167,7 +164,8 @@ body.dark-mode .nav-links a {
     color: #fff;
 }
 
-/* LOGO FIX: This makes the SVG White/Glow in Dark Mode */
+/* DARK MODE LOGO FIX */
+/* This flips the logo to White/Gold so it pops on Black */
 body.dark-mode .logo-icon {
     filter: invert(100%) brightness(200%) drop-shadow(0 0 5px var(--primary));
 }
