@@ -19,9 +19,10 @@ body {
     color: var(--text-dark);
     transition: var(--transition);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* 2. Header & Navigation (Div contains nav) */
+/* 2. Header & Navigation (This div contains the nav) */
 .header-main-container {
     background: #ffffff;
     padding: 1rem 5%;
@@ -29,6 +30,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: var(--transition);
 }
 
 .nav-container {
@@ -46,14 +48,15 @@ body {
     gap: 15px;
 }
 
-/* LIGHT MODE LOGO FIX */
-/* This forces the ENTIRE SVG (spider AND web) to be Blue */
+/* Updated for your new circular logo.png */
 .logo-icon {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the logo perfectly round */
+    border: 2px solid var(--primary); /* Adds a professional blue ring */
     transition: var(--transition);
-    /* This filter makes light/white parts of the SVG turn Blue */
-    filter: invert(31%) sepia(94%) saturate(2530%) hue-rotate(190deg) brightness(95%) contrast(102%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .brand-name {
@@ -81,7 +84,7 @@ body {
     transition: var(--transition);
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active {
     background: var(--primary);
     color: #ffffff !important;
 }
@@ -96,9 +99,18 @@ body {
     cursor: pointer;
     font-size: 1.1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: var(--transition);
 }
 
-/* 4. Hero Cards */
+#theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* 4. Hero & Content Cards */
+.container {
+    padding: 20px 5%;
+}
+
 .hero-card {
     background: var(--card-bg);
     padding: 4rem 2rem;
@@ -113,11 +125,17 @@ body {
     display: inline-block;
     background: var(--primary);
     color: white;
-    padding: 12px 30px;
+    padding: 14px 35px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     margin-top: 20px;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 /* 5. Professional Footer */
@@ -138,6 +156,7 @@ footer {
 
 .footer-column h4 { color: var(--primary); margin-bottom: 1.2rem; }
 .footer-column ul { list-style: none; padding: 0; }
+.footer-column ul li { margin-bottom: 10px; }
 .footer-column ul li a { color: #bbb; text-decoration: none; transition: 0.3s; }
 .footer-column ul li a:hover { color: var(--primary); padding-left: 5px; }
 
@@ -150,36 +169,44 @@ footer {
     font-size: 0.9rem;
 }
 
-/* 6. DARK MODE OVERRIDES (Placed at the bottom) */
+/* 6. DARK MODE OVERRIDES */
 body.dark-mode {
     background-color: var(--bg-dark);
     color: var(--text-light);
 }
 
 body.dark-mode .header-main-container {
-    background: #000;
+    background: #000000;
 }
 
 body.dark-mode .nav-links a {
-    color: #fff;
+    color: #ffffff;
 }
 
-/* DARK MODE LOGO FIX */
-/* This flips the logo to White/Gold so it pops on Black */
 body.dark-mode .logo-icon {
-    filter: invert(100%) brightness(200%) drop-shadow(0 0 5px var(--primary));
+    border-color: #ffffff;
+    box-shadow: 0 0 15px var(--primary); /* Blue glow for the spider web in the dark */
 }
 
 body.dark-mode .hero-card {
     background: var(--card-bg-dark);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 body.dark-mode #theme-toggle {
     background: #f1c40f;
-    color: #000;
+    color: #000000;
 }
 
-/* Responsive Desktop */
+/* 7. Animations */
+.typing-text { color: var(--primary); border-right: 3px solid var(--primary); }
+.reveal { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* 8. Responsive Desktop Navigation */
 @media (min-width: 992px) {
-    .nav-container { flex-direction: row; justify-content: space-between; }
+    .nav-container { 
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
 }
