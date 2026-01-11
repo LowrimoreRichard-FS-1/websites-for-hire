@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Websites For Hire</title>
-    <link rel="icon" type="image/svg+xml" href="IMG/favicon.png">
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
     <div class="header-main-container">
         <nav class="nav-container">
             <div class="brand-wrapper">
-    <img src="IMG/logo.svg" alt="Websites For Hire Logo" class="logo-icon">
-    <h1 class="brand-name">Websites For Hire</h1>
-           </div>
+                <img src="IMG/logo.svg" alt="Websites For Hire Logo" class="logo-icon">
+                <h1 class="brand-name">Websites For Hire</h1>
+            </div>
+            
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="second-page.html">Introduction</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="form-page.html">Form</a></li>
                 <li><a href="responsive-design.html">Responsive</a></li>
@@ -28,10 +29,12 @@
     </div>
 
     <main class="container">
-        <section class="hero-card reveal">
-            <h1>I Build <span class="typing-text"></span></h1>
-            <p>Architecting digital experiences with precision. Spinning the web for your business success.</p>
-            <a href="second-page.html" class="btn-primary">Explore My Work</a>
+        <section class="hero-section centered-text reveal active">
+            <div class="hero-content">
+                <h2 class="hero-title">I Build <span class="typing-text">Professional Design</span></h2>
+                <p class="hero-subtitle">Architecting digital experiences with precision. Spinning the web for your business success.</p>
+                <a href="introduction.html" class="btn-primary">Explore My Work</a>
+            </div>
         </section>
     </main>
 
@@ -43,17 +46,10 @@
             </div>
             <div class="footer-column">
                 <h4>Navigation</h4>
-                <ul>
+                <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="form-page.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Contact</h4>
-                <ul>
-                    <li>Email: info@websitesforhire.com</li>
-                    <li>Texas, USA</li>
                 </ul>
             </div>
         </div>
@@ -61,6 +57,7 @@
             <p>&copy; 2026 Websites For Hire. All Rights Reserved.</p>
         </div>
     </footer>
+
     <script src="JS/script.js"></script>
 </body>
 </html>
